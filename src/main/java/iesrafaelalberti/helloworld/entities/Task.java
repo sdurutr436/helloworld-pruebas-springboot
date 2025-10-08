@@ -18,11 +18,10 @@ import lombok.Setter;
 @NoArgsConstructor 
 @AllArgsConstructor
 @Builder
-
 public class Task {
     
     @Id
-    @GeneratedValue (strategy = GenerationType.TABLE)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     // @SequenceGenerator(name="task_seq", sequenceName="task_seq", allocationSize=1)
     int id;
 
