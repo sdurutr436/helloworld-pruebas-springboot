@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import iesrafaelalberti.helloworld.entities.Task;
 
-public interface TaskRepository extends JpaRepository<Task, Integer> {
+public interface TaskRepository extends JpaRepository<Task, Long> {
     List<Task> findByDone(boolean done);
 }

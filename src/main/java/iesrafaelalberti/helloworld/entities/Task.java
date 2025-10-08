@@ -1,7 +1,6 @@
 package iesrafaelalberti.helloworld.entities;
 
-import java.util.Date;
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,14 +22,10 @@ public class Task {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     // @SequenceGenerator(name="task_seq", sequenceName="task_seq", allocationSize=1)
-    int id;
+    private Long id;
 
-    String name;
-    String description;
-
-    int priority;
-    int status;
-
-    Date dueDate;
+    @Column(nullable = false)
+    private String title;
+    private boolean done;
 
 }
